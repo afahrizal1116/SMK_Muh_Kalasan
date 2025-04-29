@@ -20,7 +20,7 @@
     header {
       background-color: #0288d1;
       color: white;
-      padding: 15px 10px;
+      padding: 20px;
       text-align: center;
       position: sticky;
       top: 0;
@@ -30,17 +30,16 @@
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
       background-color: #0277bd;
       padding: 10px 0;
     }
 
     nav a {
       color: white;
-      padding: 10px 15px;
+      padding: 12px 20px;
       text-decoration: none;
-      font-size: 16px;
       transition: background 0.3s ease;
     }
 
@@ -50,48 +49,34 @@
     }
 
     main {
-      padding: 20px;
+      padding: 30px;
       text-align: center;
-      animation: fadeIn 1s ease-out;
     }
 
     img.school-photo {
-      max-width: 100%;
+      max-width: 80%;
       height: auto;
       margin-top: 20px;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: popIn 0.8s ease;
     }
 
-    .profile-section img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .profile-section h2 {
-      margin-top: 20px;
-      color: #0277bd;
-    }
-
-    .profile-section p {
-      max-width: 700px;
-      margin: 10px auto;
-      line-height: 1.6;
-      color: #333;
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
     footer {
       background-color: #0288d1;
       color: white;
       text-align: center;
-      padding: 12px 10px;
-      font-size: 14px;
-      margin-top: 40px;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
     }
 
-    /* RESPONSIVE STYLES */
     @media (max-width: 600px) {
       nav a {
         padding: 8px 10px;
@@ -115,31 +100,25 @@
   </style>
 </head>
 <body>
-
   <header>
     <h1>SMK Muhammadiyah 1 Kalasan</h1>
   </header>
 
   <nav>
-    <a href="#">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="#">Program</a>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="#">Program Keahlian</a>
     <a href="#">Galeri</a>
     <a href="#">Kontak</a>
   </nav>
 
   <main>
-    <div class="profile-section">
-      <img src="https://images.unsplash.com/photo-1573164574392-d9db2898f3c9?auto=format&fit=crop&w=1400&q=80" alt="Foto Siswa">
-      <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
-      <p>Website ini menyediakan informasi resmi seputar profil sekolah, program keahlian, PPDB, dan kegiatan sekolah lainnya.</p>
-      <img src="1000279230.jpg" alt="Foto Gedung SMK" class="school-photo">
-    </div>
+    <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
+    <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo">
   </main>
 
   <footer>
-    &copy; 2025 SMK Muhammadiyah 1 Kalasan. All rights reserved.
+    &copy; 2025 SMK Muhammadiyah 1 Kalasan
   </footer>
-
 </body>
 </html>
