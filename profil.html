@@ -1,159 +1,95 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Profil - SMK Muhammadiyah 1 Kalasan</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SMK Muhammadiyah 1 Kalasan</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(to bottom right, #cfe9f1, #ffffff);
-      overflow-x: hidden;
-    }
-
-    header {
-      background: #0288d1;
-      color: white;
-      padding: 25px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      animation: slideDown 1s ease-out;
-    }
-
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background: #0277bd;
-      flex-wrap: wrap;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 12px 20px;
-      margin: 5px;
-      background: #039be5;
-      border-radius: 30px;
-      transition: background 0.4s, transform 0.4s;
-    }
-
-    nav a:hover {
-      background: #01579b;
-      transform: scale(1.1);
-    }
-
-    main {
-      padding: 50px 20px;
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      position: relative;
-    }
-
-    .card {
-      background: rgba(255, 255, 255, 0.9);
-      padding: 30px;
-      border-radius: 20px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      animation: fadeInCard 1s ease forwards;
-      transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-    }
-
-    @keyframes fadeInCard {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .card h2 {
-      color: #0288d1;
-      margin-bottom: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #0288d1;
-      color: white;
-      margin-top: 60px;
-    }
-
-    .ship {
-      position: fixed;
-      bottom: 10px;
-      left: -200px;
-      width: 150px;
-      animation: sail 25s linear infinite;
-      z-index: 0;
-    }
-
-    @keyframes sail {
-      from { left: -200px; }
-      to { left: 110%; }
+      font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
-<body>
 
-  <header>
-    <h1>SMK Muhammadiyah 1 Kalasan</h1>
-    <p>Mencetak Generasi Profesional, Islami, dan Kompetitif</p>
+<body class="bg-gradient-to-b from-blue-100 to-blue-200 overflow-x-hidden">
+  <header class="bg-white shadow fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <img src="icon.png" alt="Logo SMK" class="h-10 w-auto">
+      <nav class="space-x-4 text-sm sm:text-base">
+        <a href="#" class="text-blue-800 font-semibold hover:underline">Beranda</a>
+        <a href="#profil" class="text-blue-800 font-semibold hover:underline">Profil</a>
+        <a href="#galeri" class="text-blue-800 font-semibold hover:underline">Galeri</a>
+        <a href="#kontak" class="text-blue-800 font-semibold hover:underline">Kontak</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="#">Profil</a>
-    <a href="#">Program Keahlian</a>
-    <a href="#">Galeri</a>
-    <a href="#">Kontak</a>
-  </nav>
-
-  <main>
-    <div class="card">
-      <h2>Tentang Sekolah</h2>
-      <p>SMK Muhammadiyah 1 Kalasan adalah institusi pendidikan berbasis kejuruan yang berfokus pada pengembangan keterampilan profesional, teknologi modern, dan nilai-nilai Islami. Kami berkomitmen untuk menciptakan lulusan yang siap menghadapi dunia kerja global.</p>
-    </div>
-
-    <div class="card">
-      <h2>Visi dan Misi</h2>
-      <p><strong>Visi:</strong> Menjadi SMK unggulan berbasis iman, ilmu, dan teknologi.</p>
-      <p><strong>Misi:</strong> Membentuk lulusan berakhlak mulia, berkompetensi tinggi, berjiwa entrepreneur, dan adaptif terhadap perkembangan industri.</p>
-    </div>
-
-    <div class="card">
-      <h2>Program Keahlian</h2>
-      <p>- Teknika Kapal Niaga<br>
-         - Nautika Kapal Niaga<br>
-         - Seni Musik</p>
-    </div>
-
-    <div class="card">
-      <h2>Keunggulan</h2>
-      <p>Fasilitas lengkap, tenaga pengajar profesional, sertifikasi kompetensi, kerjasama industri nasional dan internasional, serta lingkungan belajar Islami yang modern dan nyaman.</p>
-    </div>
+  <main class="pt-24">
+    <section class="relative h-screen flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-5xl sm:text-6xl font-bold text-white drop-shadow-lg animate-bounce z-10">
+        Selamat Datang di Website SMK Muhammadiyah 1 Kalasan
+      </h1>
+      <img src="474e0e89-0bbb-436a-af61-ef059115f6f5.png" class="absolute bottom-0 animate-[shipmove_10s_linear_infinite] w-40 sm:w-60" style="left: 10%;">
+      <img src="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" class="absolute bottom-0 animate-[shipmove_15s_linear_infinite] w-36 sm:w-56" style="right: 10%;">
+    </section>
+ <section class="relative z-20 py-16 px-4 sm:px-8 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-gradient-to-r from-blue-100 to-blue-200 p-6 sm:p-10 rounded-3xl shadow-2xl transform transition-all duration-700 hover:scale-[1.02] animate-fade-in">
+          <h2 class="text-3xl sm:text-4xl font-bold text-blue-800 text-center mb-6">Tentang Sekolah Kami</h2>
+          <div class="text-gray-700 space-y-4 text-justify">
+            <p>
+              <strong>SMK Muhammadiyah 1 Kalasan</strong> yang berdiri pada tanggal <strong>17 April 1996</strong> mempunyai komitmen untuk mencetak SDM yang unggul agar dapat terserap di lapangan pekerjaan. Pendidikan yang berfungsi sebagai wahana untuk mencetak SDM perlu dikelola dengan setting visi unggulan, baik dari segi isi materi kurikulum, sistem, tenaga pelaksana, manajemen maupun sarana dan prasarana yang memadai.
+            </p>
+            <p>
+              SMK Muhammadiyah 1 Kalasan dari segi sumber daya dan sistem manajemen telah cukup siap menyongsong dan melaksanakan paradigma baru pemerintah dalam peningkatan kualitas pendidikan. Hal ini dapat dilihat dari hasil proses pembelajaran dan kelulusan peserta didik serta suasana kerja yang ada.
+            </p>
+            <p>
+              SMK Muhammadiyah 1 Kalasan berkomitmen untuk selalu meningkatkan kualitas dan pelayanan pendidikan. Visi dan Misi dirumuskan sebagai gambaran tentang cita-cita dan arah pandang yang akan dicapai pada masa mendatang, yang sekaligus digunakan sebagai landasan dalam penyelenggaraan sekolah.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="relative z-20 py-16 px-4 sm:px-8 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-gradient-to-r from-blue-100 to-blue-200 p-6 sm:p-10 rounded-3xl shadow-2xl transform transition-all duration-700 hover:scale-[1.02] animate-fade-in">
+          <h2 class="text-3xl sm:text-4xl font-bold text-blue-800 text-center mb-6">Tentang Sekolah Kami</h2>
+          <div class="text-gray-700 space-y-4 text-justify">
+            <p>
+              <strong>SMK Muhammadiyah 1 Kalasan</strong> yang berdiri pada tanggal <strong>17 April 1996</strong> mempunyai komitmen untuk mencetak SDM yang unggul agar dapat terserap di lapangan pekerjaan. Pendidikan yang berfungsi sebagai wahana untuk mencetak SDM perlu dikelola dengan setting visi unggulan, baik dari segi isi materi kurikulum, sistem, tenaga pelaksana, manajemen maupun sarana dan prasarana yang memadai.
+            </p>
+            <p>
+              SMK Muhammadiyah 1 Kalasan dari segi sumber daya dan sistem manajemen telah cukup siap menyongsong dan melaksanakan paradigma baru pemerintah dalam peningkatan kualitas pendidikan. Hal ini dapat dilihat dari hasil proses pembelajaran dan kelulusan peserta didik serta suasana kerja yang ada.
+            </p>
+            <p>
+              SMK Muhammadiyah 1 Kalasan berkomitmen untuk selalu meningkatkan kualitas dan pelayanan pendidikan. Visi dan Misi dirumuskan sebagai gambaran tentang cita-cita dan arah pandang yang akan dicapai pada masa mendatang, yang sekaligus digunakan sebagai landasan dalam penyelenggaraan sekolah.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <img class="ship" src="https://cdn.pixabay.com/photo/2013/07/13/10/44/sailing-ship-157909_960_720.png" alt="kapal layar animasi">
+  <style>
+    @keyframes shipmove {
+      0% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(30px) translateY(-10px); }
+      100% { transform: translateX(0) translateY(0); }
+    }
 
-  <footer>
-    &copy; 2025 SMK Muhammadiyah 1 Kalasan. All rights reserved.
-  </footer>
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
 
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+  </style>
 </body>
+
 </html>
