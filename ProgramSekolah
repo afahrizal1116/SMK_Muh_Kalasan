@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK Muh 1 Kalasan</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      padding: 20px;
+      text-align: center;
+    }
+    footer {
+      background-color: #eee;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Selamat Datang di Website</h1>
+    <h2>SMK Muhammadiyah 1 Kalasan</h2>
+  </header>
+  <main>
+    <p>Website ini dibuat menggunakan GitHub Pages secara gratis.</p>
+    <p>Silakan dikembangkan lebih lanjut sesuai kebutuhan sekolah.</p>
+  </main>
+  <footer>
+    &copy; 2025 SMK Muh 1 Kalasan
+  </footer>
+</body>
+</html>
