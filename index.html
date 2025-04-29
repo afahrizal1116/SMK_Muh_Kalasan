@@ -20,7 +20,7 @@
     header {
       background-color: #0288d1;
       color: white;
-      padding: 20px;
+      padding: 15px 10px;
       text-align: center;
       position: sticky;
       top: 0;
@@ -30,6 +30,7 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       background-color: #0277bd;
       padding: 10px 0;
@@ -37,8 +38,9 @@
 
     nav a {
       color: white;
-      padding: 12px 20px;
+      padding: 10px 15px;
       text-decoration: none;
+      font-size: 16px;
       transition: background 0.3s ease;
     }
 
@@ -48,12 +50,12 @@
     }
 
     main {
-      padding: 30px;
+      padding: 20px;
       text-align: center;
     }
 
     img.school-photo {
-      max-width: 80%;
+      max-width: 100%;
       height: auto;
       margin-top: 20px;
       border-radius: 12px;
@@ -70,10 +72,30 @@
       background-color: #0288d1;
       color: white;
       text-align: center;
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      padding: 12px 10px;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVE STYLES */
+    @media (max-width: 600px) {
+      nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      main h2 {
+        font-size: 18px;
+        padding: 0 10px;
+      }
+
+      footer {
+        font-size: 13px;
+        padding: 10px;
+      }
     }
   </style>
 </head>
@@ -85,7 +107,7 @@
   <nav>
     <a href="#">Beranda</a>
     <a href="#">Profil</a>
-    <a href="#">Program Keahlian</a>
+    <a href="#">Program</a>
     <a href="#">Galeri</a>
     <a href="#">Kontak</a>
   </nav>
