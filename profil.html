@@ -8,20 +8,14 @@
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #e0f7fa, #ffffff);
-      color: #333;
-      animation: fadeInBody 1s ease-in-out;
-    }
-
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      background: linear-gradient(to bottom right, #cfe9f1, #ffffff);
+      overflow-x: hidden;
     }
 
     header {
       background: #0288d1;
       color: white;
-      padding: 20px;
+      padding: 25px 20px;
       text-align: center;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       position: sticky;
@@ -31,8 +25,8 @@
     }
 
     @keyframes slideDown {
-      from { transform: translateY(-100%); }
-      to { transform: translateY(0); }
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
     }
 
     nav {
@@ -48,7 +42,7 @@
       text-decoration: none;
       padding: 12px 20px;
       margin: 5px;
-      background: #0288d1;
+      background: #039be5;
       border-radius: 30px;
       transition: background 0.4s, transform 0.4s;
     }
@@ -59,31 +53,32 @@
     }
 
     main {
-      padding: 40px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
+      padding: 50px 20px;
       max-width: 1200px;
       margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      position: relative;
     }
 
     .card {
-      background: white;
+      background: rgba(255, 255, 255, 0.9);
       padding: 30px;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
       animation: fadeInCard 1s ease forwards;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
     }
 
     @keyframes fadeInCard {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    .card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .card h2 {
@@ -96,13 +91,21 @@
       padding: 20px;
       background: #0288d1;
       color: white;
-      margin-top: 40px;
+      margin-top: 60px;
     }
 
-    @media (max-width: 768px) {
-      main {
-        grid-template-columns: 1fr;
-      }
+    .ship {
+      position: fixed;
+      bottom: 10px;
+      left: -200px;
+      width: 150px;
+      animation: sail 25s linear infinite;
+      z-index: 0;
+    }
+
+    @keyframes sail {
+      from { left: -200px; }
+      to { left: 110%; }
     }
   </style>
 </head>
@@ -114,7 +117,7 @@
   </header>
 
   <nav>
-    <a href="#">Beranda</a>
+    <a href="index.html">Beranda</a>
     <a href="#">Profil</a>
     <a href="#">Program Keahlian</a>
     <a href="#">Galeri</a>
@@ -135,10 +138,10 @@
 
     <div class="card">
       <h2>Program Keahlian</h2>
-      <p>- Teknik Komputer dan Jaringan<br>
-         - Rekayasa Perangkat Lunak<br>
-         - Akuntansi dan Keuangan Lembaga<br>
-         - Bisnis Daring dan Pemasaran</p>
+      <p>- Teknika Kapal Niaga<br>
+         - Nautika kapal Niaga<br>
+         - Seni Musik<br>
+        
     </div>
 
     <div class="card">
@@ -146,6 +149,8 @@
       <p>Fasilitas lengkap, tenaga pengajar profesional, sertifikasi kompetensi, kerjasama industri nasional dan internasional, serta lingkungan belajar Islami yang modern dan nyaman.</p>
     </div>
   </main>
+
+  <img class="ship" src="https://cdn.pixabay.com/photo/2013/07/13/10/44/sailing-ship-157909_960_720.png" alt="kapal layar animasi">
 
   <footer>
     &copy; 2025 SMK Muhammadiyah 1 Kalasan. All rights reserved.
