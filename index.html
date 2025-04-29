@@ -129,7 +129,7 @@
 
   <main>
     <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
-    <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo">
+ 
      <section class="relative z-20 py-16 px-4 sm:px-8 bg-white">
       <div class="max-w-5xl mx-auto">
         <div class="bg-gradient-to-r from-blue-100 to-blue-200 p-6 sm:p-10 rounded-3xl shadow-2xl transform transition-all duration-700 hover:scale-[1.02] animate-fade-in">
@@ -149,7 +149,23 @@
       </div>
     </section>
   </main>
+ <style>
+      <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo">
+    @keyframes shipmove {
+      0% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(30px) translateY(-10px); }
+      100% { transform: translateX(0) translateY(0); }
+    }
 
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+  </style>
   <footer>
     &copy; 2025 SMK Muhammadiyah 1 Kalasan
   </footer>
