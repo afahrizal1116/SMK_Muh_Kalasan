@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SMK Muhammadiyah 1 Kalasan</title>
+  <link rel="icon" type="image/png" href="icon.png"> <!-- Favicon -->
   <style>
     body {
       margin: 0;
@@ -21,11 +22,17 @@
       background-color: #0288d1;
       color: white;
       padding: 20px;
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 15px;
       position: sticky;
       top: 0;
       z-index: 1000;
       box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    header img {
+      height: 60px;
     }
 
     nav {
@@ -62,6 +69,43 @@
       animation: popIn 0.8s ease;
     }
 
+    .box-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .program-box {
+      background: #ffffffcc;
+      border: 2px solid #0288d1;
+      border-radius: 16px;
+      width: 250px;
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .program-box:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+    }
+
+    .ship {
+      width: 100px;
+      position: absolute;
+      bottom: 50px;
+      left: -120px;
+      animation: sail 25s linear infinite;
+    }
+
+    @keyframes sail {
+      0% { left: -150px; bottom: 30px; }
+      50% { bottom: 70px; }
+      100% { left: 100%; bottom: 30px; }
+    }
+
     @keyframes popIn {
       0% { transform: scale(0.8); opacity: 0; }
       100% { transform: scale(1); opacity: 1; }
@@ -84,12 +128,7 @@
       }
 
       header h1 {
-        font-size: 20px;
-      }
-
-      main h2 {
         font-size: 18px;
-        padding: 0 10px;
       }
 
       footer {
@@ -101,6 +140,7 @@
 </head>
 <body>
   <header>
+    <img src="icon.png" alt="Logo SMK">
     <h1>SMK Muhammadiyah 1 Kalasan</h1>
   </header>
 
@@ -115,6 +155,23 @@
   <main>
     <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
     <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo">
+
+    <div class="box-container">
+      <div class="program-box">
+        <h3>Teknika Kapal Niaga</h3>
+        <p>Fokus pada teknik mesin dan sistem kapal laut.</p>
+      </div>
+      <div class="program-box">
+        <h3>Nautika Kapal Niaga</h3>
+        <p>Mempelajari navigasi dan pengoperasian kapal.</p>
+      </div>
+      <div class="program-box">
+        <h3>Seni Musik</h3>
+        <p>Mengembangkan bakat dan teknik bermusik secara profesional.</p>
+      </div>
+    </div>
+
+    <img src="474e0e89-0bbb-436a-af61-ef059115f6f5.png" class="ship" alt="Kapal Layar">
   </main>
 
   <footer>
