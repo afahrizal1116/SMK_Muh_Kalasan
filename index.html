@@ -4,29 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SMK Muhammadiyah 1 Kalasan</title>
+  <link rel="icon" type="image/gif" href="icon.gif">
   <style>
     body {
+      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
+      padding: 0;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff);
+      color: #004d40;
+      text-align: center;
     }
 
-    /* Animasi */
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateX(-50px);
-      }
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
+    h1 {
+      margin-top: 50px;
+      font-size: 2.5em;
+      animation: fadeInDown 2s ease-out;
     }
 
-    @keyframes fadeIn {
+    .image-container {
+      margin-top: 30px;
+      animation: zoomIn 2s ease-in-out;
+    }
+
+    .image-container img {
+      max-width: 90%;
+      height: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      transition: transform 0.4s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.03);
+    }
+
+    @keyframes fadeInDown {
       from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-40px);
       }
       to {
         opacity: 1;
@@ -34,191 +49,25 @@
       }
     }
 
-    /* Header */
-    .header-top {
-      background-color: #33691E;
-      color: white;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      font-size: 14px;
-    }
-
-    .header-main {
-      background-color: #558B2F;
-      color: white;
-      display: flex;
-      align-items: center;
-      padding: 10px 20px;
-      animation: slideIn 1s ease-out;
-    }
-
-    .header-main img {
-      height: 70px;
-      margin-right: 15px;
-      transition: transform 0.5s ease;
-      border-radius: 10px;
-    }
-
-    .header-main img:hover {
-      transform: rotate(360deg) scale(1.05);
-    }
-
-    .header-main h1 {
-      margin: 0;
-      font-size: 24px;
-      color: #FFEB3B;
-      animation: fadeIn 1s ease-out 0.5s forwards;
-    }
-
-    .header-main p {
-      margin: 0;
-      font-size: 14px;
-      opacity: 0;
-      animation: fadeIn 1s ease-out 1s forwards;
-    }
-
-    /* Menu Navigasi */
-    nav {
-      background-color: #1B5E20;
-    }
-
-    .menu {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 0;
-      margin: 0;
-      list-style: none;
-      justify-content: center;
-    }
-
-    .menu li {
-      position: relative;
-    }
-
-    .menu > li > a {
-      display: block;
-      padding: 12px 20px;
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background-color 0.3s;
-    }
-
-    .menu li:hover {
-      background-color: #2E7D32;
-    }
-
-    /* Submenu Dropdown */
-    .submenu {
-      display: none;
-      position: absolute;
-      background-color: #33691E;
-      min-width: 160px;
-      z-index: 1;
-    }
-
-    .submenu li a {
-      padding: 10px;
-      display: block;
-      color: white;
-      text-decoration: none;
-    }
-
-    .menu li:hover .submenu {
-      display: block;
-    }
-
-    /* Konten utama */
-    .main-content {
-      padding: 20px;
-      animation: fadeIn 1.2s ease-out;
-    }
-
-    .main-content img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    }
-
-    .main-content h2 {
-      margin-top: 20px;
-      color: #1B5E20;
-    }
-
-    footer {
-      background-color: #1B5E20;
-      color: white;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-      margin-top: 40px;
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   </style>
 </head>
 <body>
 
-  <!-- Header Atas -->
-  <div class="header-top">
-    <div>Email: info@smkmuh1kalasan.sch.id</div>
-    <div>Telepon: 0274 123456 | <span style="cursor:pointer;">🔍 Pencarian</span></div>
+  <h1>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h1>
+
+  <div class="image-container">
+    <img src="1000279230.jpg" alt="Gedung SMK Muhammadiyah 1 Kalasan">
   </div>
-
-  <!-- Header Logo & Nama -->
-  <div class="header-main">
-    <img src="icon.gif" alt="Logo SMK Muhammadiyah 1 Kalasan">
-    <div>
-      <h1>SMK MUHAMMADIYAH 1 KALASAN</h1>
-      <p>Where Tomorrow's Leaders Come Together</p>
-    </div>
-  </div>
-
-  <!-- Navigasi Menu -->
-  <nav>
-    <ul class="menu">
-      <li><a href="#">🏠 Profil</a></li>
-      <li><a href="#">Visi dan Misi</a></li>
-      <li>
-        <a href="#">Kategori ▾</a>
-        <ul class="submenu">
-          <li><a href="#">TKJ</a></li>
-          <li><a href="#">TBSM</a></li>
-          <li><a href="#">AKL</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Direktori</a></li>
-      <li><a href="#">Pendaftaran Alumni</a></li>
-      <li>
-        <a href="#">PPDB ▾</a>
-        <ul class="submenu">
-          <li><a href="#">Syarat</a></li>
-          <li><a href="#">Jadwal</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">Galeri ▾</a>
-        <ul class="submenu">
-          <li><a href="#">Foto</a></li>
-          <li><a href="#">Video</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Hubungi Kami</a></li>
-    </ul>
-  </nav>
-
-  <!-- Gambar Utama -->
-  <div class="main-content">
-    <img src="https://images.unsplash.com/photo-1573164574392-d9db2898f3c9?auto=format&fit=crop&w=1400&q=80" alt="Foto Siswa">
-    <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
-    <p>Website ini menyediakan informasi resmi seputar profil sekolah, program keahlian, PPDB, dan kegiatan sekolah lainnya.</p>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 SMK Muhammadiyah 1 Kalasan. All rights reserved.
-  </footer>
 
 </body>
 </html>
