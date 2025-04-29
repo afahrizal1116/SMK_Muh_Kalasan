@@ -2,45 +2,117 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>SMK Muh 1 Kalasan</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #f7f7f7;
       margin: 0;
-      padding: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
     }
+
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    .sidebar {
+      width: 220px;
+      background-color: #f1f1f1;
+      padding: 20px;
+      border-left: 2px solid #ddd;
+    }
+
+    .menu-button {
+      display: block;
+      margin-bottom: 10px;
+      padding: 10px;
+      text-align: left;
+      background-color: #004080;
+      color: white;
+      border: none;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .menu-button:hover {
+      background-color: #0066cc;
+    }
+
     header {
       background-color: #004080;
       color: white;
-      padding: 20px;
+      padding: 15px;
       text-align: center;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
     }
-    main {
-      padding: 20px;
-      text-align: center;
+
+    .content {
+      margin-top: 70px;
     }
-    footer {
-      background-color: #eee;
-      padding: 10px;
-      text-align: center;
-      font-size: 14px;
-      margin-top: 30px;
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        border-left: none;
+        border-top: 2px solid #ddd;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Selamat Datang di Website</h1>
     <h2>SMK Muhammadiyah 1 Kalasan</h2>
   </header>
+
   <main>
-    <p>Website ini dibuat menggunakan GitHub Pages secara gratis.</p>
-    <p>Silakan dikembangkan lebih lanjut sesuai kebutuhan sekolah.</p>
+    <div class="content" id="konten">
+      <h3>Selamat datang!</h3>
+      <p>Silakan klik menu di kanan untuk melihat informasi lainnya.</p>
+    </div>
   </main>
-  <footer>
-    &copy; 2025 SMK Muh 1 Kalasan
-  </footer>
+
+  <div class="sidebar">
+    <button class="menu-button" onclick="tampilkan('beranda')">Beranda</button>
+    <button class="menu-button" onclick="tampilkan('program')">Program Sekolah</button>
+    <button class="menu-button" onclick="tampilkan('tentang')">Tentang</button>
+  </div>
+
+  <script>
+    function tampilkan(halaman) {
+      const konten = document.getElementById('konten');
+      if (halaman === 'beranda') {
+        konten.innerHTML = `
+          <h3>Beranda</h3>
+          <p>Selamat datang di website resmi SMK Muhammadiyah 1 Kalasan.</p>
+        `;
+      } else if (halaman === 'program') {
+        konten.innerHTML = `
+          <h3>Program Sekolah</h3>
+          <p>Berikut adalah program sekolah yang sedang berjalan:</p>
+          <ul>
+            <li>Program Kejuruan: TKJ, TBSM, AKL</li>
+            <li>Ekstrakurikuler: Pramuka, PMR, Paskibra, dll.</li>
+            <li>Magang industri & kunjungan kerja</li>
+          </ul>
+        `;
+      } else if (halaman === 'tentang') {
+        konten.innerHTML = `
+          <h3>Tentang</h3>
+          <p>Website ini dibuat oleh siswa SMK Muh 1 Kalasan sebagai bagian dari proyek pembelajaran pembuatan website menggunakan GitHub Pages.</p>
+        `;
+      }
+    }
+  </script>
+
 </body>
 </html>
