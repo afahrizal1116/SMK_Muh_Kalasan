@@ -3,116 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SMK Muh 1 Kalasan</title>
+  <title>SMK Muhammadiyah 1 Kalasan</title>
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
+    }
+
+    /* Header */
+    .header-top {
+      background-color: #33691E;
+      color: white;
+      padding: 10px 20px;
       display: flex;
-      min-height: 100vh;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
     }
 
-    main {
-      flex: 1;
-      padding: 20px;
+    .header-main {
+      background-color: #558B2F;
+      color: white;
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
     }
 
-    .sidebar {
-      width: 220px;
-      background-color: #f1f1f1;
-      padding: 20px;
-      border-left: 2px solid #ddd;
+    .header-main img {
+      height: 60px;
+      margin-right: 15px;
     }
 
-    .menu-button {
+    .header-main h1 {
+      margin: 0;
+      font-size: 24px;
+      color: #FFEB3B;
+    }
+
+    .header-main p {
+      margin: 0;
+      font-size: 14px;
+    }
+
+    /* Menu Navigasi */
+    nav {
+      background-color: #1B5E20;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      justify-content: center;
+    }
+
+    .menu li {
+      position: relative;
+    }
+
+    .menu > li > a {
       display: block;
-      margin-bottom: 10px;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .menu li:hover {
+      background-color: #2E7D32;
+    }
+
+    /* Submenu Dropdown */
+    .submenu {
+      display: none;
+      position: absolute;
+      background-color: #33691E;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .submenu li a {
       padding: 10px;
-      text-align: left;
-      background-color: #004080;
+      display: block;
       color: white;
-      border: none;
-      width: 100%;
-      cursor: pointer;
-      border-radius: 5px;
+      text-decoration: none;
     }
 
-    .menu-button:hover {
-      background-color: #0066cc;
+    .menu li:hover .submenu {
+      display: block;
     }
 
-    header {
-      background-color: #004080;
+    /* Konten utama */
+    .main-content {
+      padding: 20px;
+    }
+
+    .main-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    footer {
+      background-color: #1B5E20;
       color: white;
-      padding: 15px;
       text-align: center;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-    }
-
-    .content {
-      margin-top: 70px;
-    }
-
-    @media (max-width: 768px) {
-      body {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        border-left: none;
-        border-top: 2px solid #ddd;
-      }
+      padding: 10px;
+      font-size: 14px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h2>SMK Muhammadiyah 1 Kalasan</h2>
-  </header>
-
-  <main>
-    <div class="content" id="konten">
-      <h3>Selamat datang!</h3>
-      <p>Silakan klik menu di kanan untuk melihat informasi lainnya.</p>
-    </div>
-  </main>
-
-  <div class="sidebar">
-    <button class="menu-button" onclick="tampilkan('beranda')">Beranda</button>
-    <button class="menu-button" onclick="tampilkan('program')">Program Sekolah</button>
-    <button class="menu-button" onclick="tampilkan('tentang')">Tentang</button>
+  <!-- Header Atas -->
+  <div class="header-top">
+    <div>Email: info@smkmuh1kalasan.sch.id</div>
+    <div>Telepon: 0274 123456 | <span style="cursor:pointer;">🔍 Pencarian</span></div>
   </div>
 
-  <script>
-    function tampilkan(halaman) {
-      const konten = document.getElementById('konten');
-      if (halaman === 'beranda') {
-        konten.innerHTML = `
-          <h3>Beranda</h3>
-          <p>Selamat datang di website resmi SMK Muhammadiyah 1 Kalasan.</p>
-        `;
-      } else if (halaman === 'program') {
-        konten.innerHTML = `
-          <h3>Program Sekolah</h3>
-          <p>Berikut adalah program sekolah yang sedang berjalan:</p>
-          <ul>
-            <li>Program Kejuruan: TKJ, TBSM, AKL</li>
-            <li>Ekstrakurikuler: Pramuka, PMR, Paskibra, dll.</li>
-            <li>Magang industri & kunjungan kerja</li>
-          </ul>
-        `;
-      } else if (halaman === 'tentang') {
-        konten.innerHTML = `
-          <h3>Tentang</h3>
-          <p>Website ini dibuat oleh siswa SMK Muh 1 Kalasan sebagai bagian dari proyek pembelajaran pembuatan website menggunakan GitHub Pages.</p>
-        `;
-      }
-    }
-  </script>
+  <!-- Header Logo & Nama -->
+  <div class="header-main">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Tut_Wuri_Handayani.png" alt="Logo Sekolah">
+    <div>
+      <h1>SMK MUHAMMADIYAH 1 KALASAN</h1>
+      <p>Where Tomorrow's Leaders Come Together</p>
+    </div>
+  </div>
+
+  <!-- Navigasi Menu -->
+  <nav>
+    <ul class="menu">
+      <li><a href="#">🏠 Profil</a></li>
+      <li><a href="#">Visi dan Misi</a></li>
+      <li>
+        <a href="#">Kategori ▾</a>
+        <ul class="submenu">
+          <li><a href="#">TKJ</a></li>
+          <li><a href="#">TBSM</a></li>
+          <li><a href="#">AKL</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Direktori</a></li>
+      <li><a href="#">Pendaftaran Alumni</a></li>
+      <li>
+        <a href="#">PPDB ▾</a>
+        <ul class="submenu">
+          <li><a href="#">Syarat</a></li>
+          <li><a href="#">Jadwal</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">Galeri ▾</a>
+        <ul class="submenu">
+          <li><a href="#">Foto</a></li>
+          <li><a href="#">Video</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Hubungi Kami</a></li>
+    </ul>
+  </nav>
+
+  <!-- Gambar Utama -->
+  <div class="main-content">
+    <img src="https://images.unsplash.com/photo-1573164574392-d9db2898f3c9?auto=format&fit=crop&w=1400&q=80" alt="Foto Siswa">
+    <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
+    <p>Website ini menyediakan informasi resmi seputar profil sekolah, program keahlian, PPDB, dan kegiatan sekolah lainnya.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 SMK Muhammadiyah 1 Kalasan. All rights reserved.
+  </footer>
 
 </body>
 </html>
