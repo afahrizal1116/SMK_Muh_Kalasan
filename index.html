@@ -1,138 +1,78 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SMK Muhammadiyah 1 Kalasan</title>
-  <link rel="icon" href="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" type="image/png" />
+  <link rel="icon" href="icon.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #fff);
-      animation: fadeIn 1s ease-in;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    header {
-      background-color: #0288d1;
-      color: white;
-      padding: 15px 20px;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    header img {
-      height: 50px;
-      width: auto;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      background-color: #0277bd;
-      padding: 10px 0;
-    }
-
-    nav a {
-      color: white;
-      padding: 12px 20px;
-      text-decoration: none;
-      transition: background 0.3s ease;
-    }
-
-    nav a:hover {
-      background-color: #01579b;
-      border-radius: 5px;
-    }
-
-    main {
-      padding: 30px;
-      text-align: center;
-    }
-
-    img.school-photo {
-      max-width: 80%;
-      height: auto;
-      margin-top: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      animation: popIn 0.8s ease;
-    }
-
-    @keyframes popIn {
-      0% { transform: scale(0.8); opacity: 0; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-
-    footer {
-      background-color: #0288d1;
-      color: white;
-      text-align: center;
-      padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-    }
-
-    @media (max-width: 600px) {
-      nav a {
-        padding: 8px 10px;
-        font-size: 14px;
-      }
-
-      header h1 {
-        font-size: 20px;
-      }
-
-      main h2 {
-        font-size: 18px;
-        padding: 0 10px;
-      }
-
-      footer {
-        font-size: 13px;
-        padding: 10px;
-      }
+      font-family: 'Inter', sans-serif;
     }
   </style>
 </head>
-<body>
-  <header>
-    <img src="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" alt="Logo SMK" />
-    <h1>SMK Muhammadiyah 1 Kalasan</h1>
+
+<body class="bg-gradient-to-b from-blue-100 to-blue-200 overflow-x-hidden">
+  <header class="bg-white shadow fixed w-full top-0 z-50">
+    <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+      <img src="icon.png" alt="Logo SMK" class="h-10 w-auto">
+      <nav class="space-x-4 text-sm sm:text-base">
+        <a href="#" class="text-blue-800 font-semibold hover:underline">Beranda</a>
+        <a href="#profil" class="text-blue-800 font-semibold hover:underline">Profil</a>
+        <a href="#galeri" class="text-blue-800 font-semibold hover:underline">Galeri</a>
+        <a href="#kontak" class="text-blue-800 font-semibold hover:underline">Kontak</a>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
-    <a href="#">Program Keahlian</a>
-    <a href="#">Galeri</a>
-    <a href="#">Kontak</a>
-  </nav>
+  <main class="pt-24">
+    <section class="relative h-screen flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-5xl sm:text-6xl font-bold text-white drop-shadow-lg animate-bounce z-10">
+        Selamat Datang di Website SMK Muhammadiyah 1 Kalasan
+      </h1>
+      <img src="474e0e89-0bbb-436a-af61-ef059115f6f5.png" class="absolute bottom-0 animate-[shipmove_10s_linear_infinite] w-40 sm:w-60" style="left: 10%;">
+      <img src="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" class="absolute bottom-0 animate-[shipmove_15s_linear_infinite] w-36 sm:w-56" style="right: 10%;">
+    </section>
 
-  <main>
-    <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
-    <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo">
+    <section class="relative z-20 py-16 px-4 sm:px-8 bg-white">
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-gradient-to-r from-blue-100 to-blue-200 p-6 sm:p-10 rounded-3xl shadow-2xl transform transition-all duration-700 hover:scale-[1.02] animate-fade-in">
+          <h2 class="text-3xl sm:text-4xl font-bold text-blue-800 text-center mb-6">Tentang Sekolah Kami</h2>
+          <div class="text-gray-700 space-y-4 text-justify">
+            <p>
+              <strong>SMK Muhammadiyah 1 Kalasan</strong> yang berdiri pada tanggal <strong>17 April 1996</strong> mempunyai komitmen untuk mencetak SDM yang unggul agar dapat terserap di lapangan pekerjaan. Pendidikan yang berfungsi sebagai wahana untuk mencetak SDM perlu dikelola dengan setting visi unggulan, baik dari segi isi materi kurikulum, sistem, tenaga pelaksana, manajemen maupun sarana dan prasarana yang memadai.
+            </p>
+            <p>
+              SMK Muhammadiyah 1 Kalasan dari segi sumber daya dan sistem manajemen telah cukup siap menyongsong dan melaksanakan paradigma baru pemerintah dalam peningkatan kualitas pendidikan. Hal ini dapat dilihat dari hasil proses pembelajaran dan kelulusan peserta didik serta suasana kerja yang ada.
+            </p>
+            <p>
+              SMK Muhammadiyah 1 Kalasan berkomitmen untuk selalu meningkatkan kualitas dan pelayanan pendidikan. Visi dan Misi dirumuskan sebagai gambaran tentang cita-cita dan arah pandang yang akan dicapai pada masa mendatang, yang sekaligus digunakan sebagai landasan dalam penyelenggaraan sekolah.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <footer>
-    &copy; 2025 SMK Muhammadiyah 1 Kalasan
-  </footer>
+  <style>
+    @keyframes shipmove {
+      0% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(30px) translateY(-10px); }
+      100% { transform: translateX(0) translateY(0); }
+    }
+
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+  </style>
 </body>
+
 </html>
