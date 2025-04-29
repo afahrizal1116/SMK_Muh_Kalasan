@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Profil - SMK Muhammadiyah 1 Kalasan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      background-color: #0288d1;
+      color: white;
+      padding: 15px 10px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      background-color: #0277bd;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      padding: 10px 15px;
+      text-decoration: none;
+      font-size: 16px;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #01579b;
+      border-radius: 5px;
+    }
+
+    main {
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .profile-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+
+    .profile-section h2 {
+      margin-top: 20px;
+      color: #0277bd;
+    }
+
+    .profile-section p {
+      max-width: 700px;
+      margin: 10px auto;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    footer {
+      background-color: #0288d1;
+      color: white;
+      text-align: center;
+      padding: 12px 10px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      nav a {
+        padding: 8px 10px;
+        font-size: 14px;
+      }
+
+      header h1 {
+        font-size: 20px;
+      }
+
+      main h2 {
+        font-size: 18px;
+        padding: 0 10px;
+      }
+
+      footer {
+        font-size: 13px;
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>SMK Muhammadiyah 1 Kalasan</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="#">Program</a>
+    <a href="#">Galeri</a>
+    <a href="#">Kontak</a>
+  </nav>
+
+  <main>
+    <div class="profile-section">
+      <img src="https://images.unsplash.com/photo-1573164574392-d9db2898f3c9?auto=format&fit=crop&w=1400&q=80" alt="Foto Siswa">
+      <h2>Profil Sekolah</h2>
+      <p>SMK Muhammadiyah 1 Kalasan adalah sekolah menengah kejuruan unggulan yang berkomitmen mencetak lulusan siap kerja dan berdaya saing global. Kami memiliki berbagai program keahlian yang mendukung perkembangan teknologi dan dunia industri masa kini.</p>
+      <p>Dengan dukungan tenaga pengajar profesional dan fasilitas lengkap, kami terus berinovasi dalam menciptakan lingkungan belajar yang kondusif, Islami, dan kompetitif.</p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 SMK Muhammadiyah 1 Kalasan. All rights reserved.
+  </footer>
+
+</body>
+</html>
