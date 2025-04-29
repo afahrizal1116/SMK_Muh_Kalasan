@@ -1,73 +1,102 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SMK Muhammadiyah 1 Kalasan</title>
-  <link rel="icon" type="image/gif" href="icon.gif">
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom right, #e0f7fa, #fff);
-      color: #004d40;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+
+    header {
+      background-color: #0288d1;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #0277bd;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      padding: 12px 20px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #01579b;
+      border-radius: 5px;
+    }
+
+    main {
+      padding: 30px;
       text-align: center;
     }
 
-    h1 {
-      margin-top: 50px;
-      font-size: 2.5em;
-      animation: fadeInDown 2s ease-out;
-    }
-
-    .image-container {
-      margin-top: 30px;
-      animation: zoomIn 2s ease-in-out;
-    }
-
-    .image-container img {
-      max-width: 90%;
+    img.school-photo {
+      max-width: 80%;
       height: auto;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-      transition: transform 0.4s;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      animation: popIn 0.8s ease;
     }
 
-    .image-container img:hover {
-      transform: scale(1.03);
+    @keyframes popIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
     }
 
-    @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-40px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes zoomIn {
-      from {
-        opacity: 0;
-        transform: scale(0.8);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
+    footer {
+      background-color: #0288d1;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>SMK Muhammadiyah 1 Kalasan</h1>
+  </header>
 
-  <h1>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h1>
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Profil</a>
+    <a href="#">Program Keahlian</a>
+    <a href="#">Galeri</a>
+    <a href="#">Kontak</a>
+  </nav>
 
-  <div class="image-container">
-    <img src="1000279230.jpg" alt="Gedung SMK Muhammadiyah 1 Kalasan">
-  </div>
+  <main>
+    <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
+    <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo">
+  </main>
 
+  <footer>
+    &copy; 2025 SMK Muhammadiyah 1 Kalasan
+  </footer>
 </body>
 </html>
