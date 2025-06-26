@@ -9,88 +9,89 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to bottom right, #e0f7fa, #fff);
-      animation: fadeIn 1s ease-in;
+      background: #f1f7ff;
     }
 
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
+    /* HEADER */
     header {
-      background-color: #0288d1;
+      background-color: #003366;
       color: white;
-      padding: 15px 20px;
+      padding: 10px 20px;
       display: flex;
       align-items: center;
-      gap: 15px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
     }
 
     header img {
-      height: 50px;
-      width: auto;
+      height: 60px;
+      margin-bottom: 8px;
     }
 
     header h1 {
       margin: 0;
       font-size: 24px;
+      color: #ffc107; /* Kuning seperti Prambanan */
     }
 
+    header p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background-color: #0277bd;
+      background-color: #005ebd;
       padding: 10px 0;
     }
 
     nav a {
       color: white;
-      padding: 12px 20px;
+      padding: 12px 18px;
       text-decoration: none;
+      font-size: 14px;
       transition: background 0.3s ease;
     }
 
     nav a:hover {
-      background-color: #01579b;
+      background-color: #003366;
       border-radius: 5px;
     }
 
+    /* MAIN CONTENT */
     main {
       padding: 30px 20px;
       text-align: center;
     }
 
     h2 {
-      font-size: 28px;
+      font-size: 26px;
+      color: #003366;
       margin-bottom: 30px;
-      color: #01579b;
     }
 
-    /* Tentang Sekolah */
+    /* TENTANG SEKOLAH */
     .tentang-sekolah {
       padding: 40px 20px;
-      background-color: #f0f9ff;
+      background-color: #e9f4ff;
     }
 
     .box-tentang {
       max-width: 900px;
       margin: 0 auto;
-      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      background: white;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-      animation: fade-in 1s ease-out;
     }
 
     .judul-box {
       text-align: center;
-      font-size: 28px;
+      font-size: 26px;
       color: #0277bd;
       margin-bottom: 20px;
     }
@@ -111,7 +112,7 @@
       font-size: 16px;
     }
 
-    /* Program Keahlian */
+    /* PROGRAM KEAHLIAN */
     .program-keahlian {
       padding: 50px 20px;
       background-color: #ffffff;
@@ -119,7 +120,7 @@
 
     .program-keahlian h2 {
       margin-bottom: 40px;
-      color: #01579b;
+      color: #003366;
     }
 
     .card-container {
@@ -133,7 +134,7 @@
       background: #e3f2fd;
       border-radius: 15px;
       padding: 25px;
-      width: 260px;
+      width: 280px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -155,21 +156,16 @@
       text-align: justify;
     }
 
-    @keyframes fade-in {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
+    /* FOOTER */
     footer {
-      background-color: #0288d1;
+      background-color: #003366;
       color: white;
       text-align: center;
       padding: 15px 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
+      margin-top: 50px;
     }
 
+    /* RESPONSIVE */
     @media (max-width: 600px) {
       nav a {
         padding: 8px 10px;
@@ -180,43 +176,36 @@
         font-size: 20px;
       }
 
-      h2 {
-        font-size: 20px;
-      }
-
-      footer {
-        font-size: 13px;
-        padding: 10px;
-      }
-
       .card-container {
         flex-direction: column;
         align-items: center;
       }
     }
-
-    @keyframes shipmove {
-      0% { transform: translateX(0) translateY(0); }
-      50% { transform: translateX(30px) translateY(-10px); }
-      100% { transform: translateX(0) translateY(0); }
-    }
   </style>
 </head>
 <body>
+  <!-- Header -->
   <header>
-    <img src="474e0e89-0bbb-436a-af61-ef059115f6f5.png" class="absolute bottom-0 animate-[shipmove_10s_linear_infinite] w-40 sm:w-60" style="left: 10%;">
     <img src="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" alt="Logo SMK" />
-    <h1>SMK Muhammadiyah 1 Kalasan</h1>
+    <h1>SMK MUHAMMADIYAH 1 KALASAN</h1>
+    <p>Mencetak Generasi Islami, Mandiri, Berprestasi</p>
   </header>
 
+  <!-- Navigation -->
   <nav>
-    <a href="index.html">Beranda</a>
-    <a href="profil.html">Profil</a>
-    <a href="#">Program Keahlian</a>
-    <a href="#">Galeri</a>
-    <a href="#">Kontak</a>
+    <a href="index.html">🏠 PROFIL</a>
+    <a href="visi-misi.html">VISI DAN MISI</a>
+    <a href="#">KATEGORI</a>
+    <a href="#">DIREKTORI</a>
+    <a href="#">E-RAPORT</a>
+    <a href="#">KBM 2021</a>
+    <a href="#">PENDAFTARAN ALUMNI</a>
+    <a href="#">PPDB 2025</a>
+    <a href="#">GALERI</a>
+    <a href="#">HUBUNGI KAMI</a>
   </nav>
 
+  <!-- Main Content -->
   <main>
     <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
 
@@ -236,21 +225,22 @@
       <h2>Program Keahlian</h2>
       <div class="card-container">
         <div class="card">
-          <h3>⚙️Teknika Kapal Niaga</h3>
-          <p>Program ini mempersiapkan siswa untuk menjadi tenaga ahli di bidang teknik permesinan kapal niaga. Siswa akan mempelajari pengoperasian, perawatan, dan perbaikan mesin utama serta mesin bantu kapal. Materi pembelajaran mencakup teknik elektro kapal, sistem perpipaan, prosedur bunkering, serta pemahaman tentang regulasi maritim seperti STCW, SOLAS, dan MARPOL. Lulusan program ini memiliki peluang karier sebagai teknisi kapal, perwira mesin, atau bekerja di galangan kapal dan instansi maritim lainnya. </p>
+          <h3>⚙️ Teknika Kapal Niaga</h3>
+          <p>Program ini mempersiapkan siswa untuk menjadi tenaga ahli di bidang teknik permesinan kapal niaga. Siswa akan mempelajari pengoperasian, perawatan, dan perbaikan mesin utama serta mesin bantu kapal.</p>
         </div>
         <div class="card">
           <h3>🧭 Nautika Kapal Niaga</h3>
-          <p>Program ini fokus pada pendidikan dan pelatihan di bidang navigasi dan pengoperasian kapal niaga. Siswa akan mempelajari teknik navigasi, prosedur keselamatan pelayaran, pengaturan bongkar muat, serta hukum laut dan peraturan maritim. Tujuan utama dari program ini adalah menghasilkan perwira deck yang kompeten dan siap bekerja di industri pelayaran nasional maupun internasional.</p>
+          <p>Program ini fokus pada pendidikan dan pelatihan di bidang navigasi dan pengoperasian kapal niaga. Siswa akan mempelajari teknik navigasi, keselamatan pelayaran, hukum laut, dan pengaturan bongkar muat.</p>
         </div>
         <div class="card">
           <h3>🎵 Seni Musik Populer</h3>
-          <p>Sebagai jurusan terbaru, program ini dirancang untuk mengembangkan bakat dan keterampilan siswa di bidang musik populer. Kurikulum mencakup pembelajaran tentang teknik vokal, penggunaan alat musik, manajemen konser, serta teknologi audio seperti mixer dan rekaman. SMK Muhammadiyah 1 Kalasan bekerja sama dengan musisi profesional dari band ternama seperti Sheila On 7, Jikustik, dan Letto untuk memberikan pengalaman belajar yang aplikatif. Fasilitas pendukung meliputi studio rekaman, ruang latihan, dan aula pertunjukan.</p>
+          <p>Sebagai jurusan terbaru, program ini dirancang untuk mengembangkan bakat dan keterampilan siswa di bidang musik populer. Dilengkapi dengan studio rekaman, ruang latihan, dan bimbingan musisi profesional.</p>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 SMK Muhammadiyah 1 Kalasan
   </footer>
