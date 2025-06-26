@@ -4,229 +4,248 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SMK Muhammadiyah 1 Kalasan</title>
-  <link rel="icon" href="logo.png" type="image/png" />
+  <link rel="icon" href="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" type="image/png" />
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    :root {
-      font-size: 16px;
-    }
-
     body {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f8fc;
-      color: #333;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #e0f7fa, #fff);
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
     }
 
     header {
-      background-color: #003366;
+      background-color: #0288d1;
       color: white;
-      padding: 1rem;
-      text-align: center;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
 
     header img {
-      height: 60px;
-      margin-bottom: 0.5rem;
+      height: 50px;
+      width: auto;
     }
 
     header h1 {
-      font-size: 1.5rem;
       margin: 0;
-      color: #ffc107;
-    }
-
-    header p {
-      font-size: 0.9rem;
-      margin: 0.3rem 0 0;
+      font-size: 24px;
     }
 
     nav {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 0.5rem;
-      background-color: #005ebd;
-      padding: 0.5rem;
+      flex-wrap: wrap;
+      background-color: #0277bd;
+      padding: 10px 0;
     }
 
     nav a {
       color: white;
+      padding: 12px 20px;
       text-decoration: none;
-      padding: 0.5rem 1rem;
-      font-size: 0.95rem;
-      border-radius: 4px;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
 
     nav a:hover {
-      background-color: #003366;
+      background-color: #01579b;
+      border-radius: 5px;
     }
 
     main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 1.5rem;
+      padding: 30px 20px;
+      text-align: center;
     }
 
     h2 {
-      text-align: center;
-      font-size: 1.6rem;
-      color: #003366;
-      margin-bottom: 1rem;
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #01579b;
     }
 
+    /* Tentang Sekolah */
     .tentang-sekolah {
-      background-color: #e3f2fd;
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: 2rem;
+      padding: 40px 20px;
+      background-color: #f0f9ff;
     }
 
-    .tentang-sekolah img {
-      width: 100%;
+    .box-tentang {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(to right, #e3f2fd, #ffffff);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fade-in 1s ease-out;
+    }
+
+    .judul-box {
+      text-align: center;
+      font-size: 28px;
+      color: #0277bd;
+      margin-bottom: 20px;
+    }
+
+    .school-photo {
+      display: block;
+      max-width: 100%;
       height: auto;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 0 auto 25px auto;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    .tentang-sekolah p {
-      font-size: 1rem;
-      line-height: 1.6;
+    .isi-box {
+      color: #333;
+      line-height: 1.7;
       text-align: justify;
+      font-size: 16px;
+    }
+
+    /* Program Keahlian */
+    .program-keahlian {
+      padding: 50px 20px;
+      background-color: #ffffff;
     }
 
     .program-keahlian h2 {
-      margin-bottom: 1rem;
+      margin-bottom: 40px;
+      color: #01579b;
     }
 
     .card-container {
       display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
     }
 
     .card {
-      background-color: #ffffff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      padding: 1rem;
-      width: 100%;
-      max-width: 300px;
-      transition: transform 0.3s ease;
+      background: #e3f2fd;
+      border-radius: 15px;
+      padding: 25px;
+      width: 260px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
     }
 
     .card h3 {
       margin-top: 0;
+      font-size: 20px;
       color: #0277bd;
-      font-size: 1.1rem;
     }
 
     .card p {
-      font-size: 0.95rem;
+      font-size: 14px;
+      color: #444;
       text-align: justify;
     }
 
+    @keyframes fade-in {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
     footer {
-      background-color: #003366;
+      background-color: #0288d1;
       color: white;
       text-align: center;
-      padding: 1rem;
-      font-size: 0.9rem;
-      margin-top: 2rem;
+      padding: 15px 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
     }
 
     @media (max-width: 600px) {
-      :root {
+      nav a {
+        padding: 8px 10px;
         font-size: 14px;
       }
 
-      nav {
-        flex-direction: column;
-        align-items: center;
+      header h1 {
+        font-size: 20px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      footer {
+        font-size: 13px;
+        padding: 10px;
       }
 
       .card-container {
         flex-direction: column;
         align-items: center;
       }
+    }
 
-      header h1 {
-        font-size: 1.3rem;
-      }
-
-      header p {
-        font-size: 0.8rem;
-      }
-
-      h2 {
-        font-size: 1.3rem;
-      }
-
-      .card h3 {
-        font-size: 1rem;
-      }
-
-      .card p {
-        font-size: 0.9rem;
-      }
-
-      footer {
-        font-size: 0.8rem;
-      }
+    @keyframes shipmove {
+      0% { transform: translateX(0) translateY(0); }
+      50% { transform: translateX(30px) translateY(-10px); }
+      100% { transform: translateX(0) translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="Logo SMK" />
+    <img src="474e0e89-0bbb-436a-af61-ef059115f6f5.png" class="absolute bottom-0 animate-[shipmove_10s_linear_infinite] w-40 sm:w-60" style="left: 10%;">
+    <img src="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" alt="Logo SMK" />
     <h1>SMK Muhammadiyah 1 Kalasan</h1>
-    <p>Mencetak Generasi Islami, Mandiri, Berprestasi</p>
   </header>
 
   <nav>
-    <a href="#">Profil</a>
-    <a href="#">Visi Misi</a>
-    <a href="#">Kategori</a>
-    <a href="#">Direktori</a>
-    <a href="#">E-Raport</a>
-    <a href="#">PPDB</a>
+    <a href="index.html">Beranda</a>
+    <a href="profil.html">Profil</a>
+    <a href="#">Program Keahlian</a>
     <a href="#">Galeri</a>
     <a href="#">Kontak</a>
   </nav>
 
   <main>
-    <h2>Selamat Datang di Website Resmi</h2>
+    <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
 
     <section class="tentang-sekolah">
-      <img src="foto-sekolah.jpg" alt="Gedung SMK" />
-      <p><strong>SMK Muhammadiyah 1 Kalasan</strong> berdiri sejak <strong>17 April 1996</strong> dengan komitmen mencetak SDM unggul untuk dunia kerja. Dilengkapi kurikulum industri, sarana praktik, dan tenaga pendidik profesional.</p>
-      <p>Sekolah ini menanamkan nilai-nilai keislaman serta keterampilan vokasional yang sesuai dengan dunia industri maupun kewirausahaan mandiri.</p>
+      <div class="box-tentang">
+        <h2 class="judul-box">Tentang Sekolah Kami</h2>
+        <img src="1000279230.jpg" alt="Gedung SMK" class="school-photo" />
+        <div class="isi-box">
+          <p><strong>SMK Muhammadiyah 1 Kalasan</strong> yang berdiri pada tanggal <strong>17 April 1996</strong> mempunyai komitmen untuk mencetak SDM yang unggul agar dapat terserap di lapangan pekerjaan. Pendidikan yang berfungsi sebagai wahana untuk mencetak SDM perlu dikelola dengan setting visi unggulan, baik dari segi isi materi kurikulum, sistem, tenaga pelaksana, manajemen maupun sarana dan prasarana yang memadai.</p>
+          <p>SMK Muhammadiyah 1 Kalasan dari segi sumber daya dan sistem manajemen telah cukup siap menyongsong dan melaksanakan paradigma baru pemerintah dalam peningkatan kualitas pendidikan. Hal ini dapat dilihat dari hasil proses pembelajaran dan kelulusan peserta didik serta suasana kerja yang ada.</p>
+          <p>SMK Muhammadiyah 1 Kalasan berkomitmen untuk selalu meningkatkan kualitas dan pelayanan pendidikan. Visi dan Misi dirumuskan sebagai gambaran tentang cita-cita dan arah pandang yang akan dicapai pada masa mendatang, yang sekaligus digunakan sebagai landasan dalam penyelenggaraan sekolah.</p>
+        </div>
+      </div>
     </section>
 
     <section class="program-keahlian">
       <h2>Program Keahlian</h2>
       <div class="card-container">
         <div class="card">
-          <h3>⚙️ Teknika Kapal Niaga</h3>
-          <p>Fokus teknik mesin kapal, sistem kelistrikan, pompa, dan perawatan mesin utama kapal.</p>
+          <h3>⚙️Teknika Kapal Niaga</h3>
+          <p>Program ini mempersiapkan siswa untuk menjadi tenaga ahli di bidang teknik permesinan kapal niaga. Siswa akan mempelajari pengoperasian, perawatan, dan perbaikan mesin utama serta mesin bantu kapal. Materi pembelajaran mencakup teknik elektro kapal, sistem perpipaan, prosedur bunkering, serta pemahaman tentang regulasi maritim seperti STCW, SOLAS, dan MARPOL. Lulusan program ini memiliki peluang karier sebagai teknisi kapal, perwira mesin, atau bekerja di galangan kapal dan instansi maritim lainnya. </p>
         </div>
         <div class="card">
           <h3>🧭 Nautika Kapal Niaga</h3>
-          <p>Belajar navigasi laut, hukum maritim, komunikasi radio, dan keselamatan pelayaran.</p>
+          <p>Program ini fokus pada pendidikan dan pelatihan di bidang navigasi dan pengoperasian kapal niaga. Siswa akan mempelajari teknik navigasi, prosedur keselamatan pelayaran, pengaturan bongkar muat, serta hukum laut dan peraturan maritim. Tujuan utama dari program ini adalah menghasilkan perwira deck yang kompeten dan siap bekerja di industri pelayaran nasional maupun internasional.</p>
         </div>
         <div class="card">
           <h3>🎵 Seni Musik Populer</h3>
-          <p>Mengasah bakat musik, teknik vokal, penguasaan alat musik, dan produksi audio digital.</p>
+          <p>Sebagai jurusan terbaru, program ini dirancang untuk mengembangkan bakat dan keterampilan siswa di bidang musik populer. Kurikulum mencakup pembelajaran tentang teknik vokal, penggunaan alat musik, manajemen konser, serta teknologi audio seperti mixer dan rekaman. SMK Muhammadiyah 1 Kalasan bekerja sama dengan musisi profesional dari band ternama seperti Sheila On 7, Jikustik, dan Letto untuk memberikan pengalaman belajar yang aplikatif. Fasilitas pendukung meliputi studio rekaman, ruang latihan, dan aula pertunjukan.</p>
         </div>
       </div>
     </section>
