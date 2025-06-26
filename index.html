@@ -6,13 +6,16 @@
   <title>SMK Muhammadiyah 1 Kalasan</title>
   <link rel="icon" href="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" type="image/png" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: #f1f7ff;
     }
 
-    /* HEADER */
     header {
       background-color: #003366;
       color: white;
@@ -30,16 +33,15 @@
 
     header h1 {
       margin: 0;
-      font-size: 24px;
+      font-size: 5vw;
       color: #ffc107;
     }
 
     header p {
-      margin: 2px 0 0;
-      font-size: 13px;
+      margin: 4px 0 0;
+      font-size: 3vw;
     }
 
-    /* NAVIGATION */
     nav {
       display: flex;
       justify-content: center;
@@ -52,7 +54,7 @@
       color: white;
       padding: 10px 12px;
       text-decoration: none;
-      font-size: 14px;
+      font-size: 3.5vw;
       transition: background 0.3s ease;
       white-space: nowrap;
     }
@@ -62,19 +64,16 @@
       border-radius: 5px;
     }
 
-    /* MAIN CONTENT */
     main {
       padding: 20px;
     }
 
     h2 {
-      font-size: 24px;
+      font-size: 5vw;
       color: #003366;
-      margin-bottom: 25px;
       text-align: center;
     }
 
-    /* TENTANG SEKOLAH */
     .tentang-sekolah {
       padding: 20px;
       background-color: #e9f4ff;
@@ -90,7 +89,7 @@
     }
 
     .judul-box {
-      font-size: 22px;
+      font-size: 5vw;
       color: #0277bd;
       margin-bottom: 15px;
       text-align: center;
@@ -101,7 +100,6 @@
       width: 100%;
       height: auto;
       border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       margin-bottom: 20px;
     }
 
@@ -109,18 +107,16 @@
       color: #333;
       line-height: 1.6;
       text-align: justify;
-      font-size: 15px;
+      font-size: 3.8vw;
     }
 
-    /* PROGRAM KEAHLIAN */
     .program-keahlian {
       padding: 30px 20px;
       background-color: #ffffff;
     }
 
     .program-keahlian h2 {
-      color: #003366;
-      margin-bottom: 30px;
+      margin-bottom: 25px;
     }
 
     .card-container {
@@ -135,7 +131,7 @@
       border-radius: 15px;
       padding: 20px;
       width: 100%;
-      max-width: 300px;
+      max-width: 320px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
@@ -146,49 +142,40 @@
     }
 
     .card h3 {
-      margin-top: 0;
-      font-size: 18px;
+      font-size: 4vw;
       color: #0277bd;
+      margin: 0 0 10px 0;
     }
 
     .card p {
-      font-size: 14px;
+      font-size: 3.6vw;
       color: #444;
       text-align: justify;
     }
 
-    /* FOOTER */
     footer {
       background-color: #003366;
       color: white;
       text-align: center;
       padding: 12px;
-      font-size: 14px;
+      font-size: 3.5vw;
       margin-top: 30px;
     }
 
-    /* RESPONSIVE */
-    @media (max-width: 768px) {
+    /* Tambahan Khusus Layar Sangat Kecil (HP <= 480px) */
+    @media (max-width: 480px) {
+      header img {
+        height: 50px;
+      }
+
       nav {
-        flex-direction: row;
-        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
       }
 
       nav a {
-        padding: 8px 10px;
-        font-size: 13px;
-      }
-
-      header h1 {
-        font-size: 20px;
-      }
-
-      .judul-box {
-        font-size: 20px;
-      }
-
-      h2 {
-        font-size: 22px;
+        padding: 8px;
+        font-size: 4vw;
       }
 
       .card-container {
@@ -197,27 +184,33 @@
       }
 
       .card {
-        width: 100%;
+        width: 90%;
       }
 
-      .isi-box {
-        font-size: 14px;
+      h2, .judul-box {
+        font-size: 6vw;
+      }
+
+      .isi-box, .card p {
+        font-size: 4vw;
+      }
+
+      footer {
+        font-size: 3.8vw;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
     <img src="a60c7425-5da8-4090-ae2d-e61c6a9df5f1.png" alt="Logo SMK" />
     <h1>SMK MUHAMMADIYAH 1 KALASAN</h1>
     <p>Mencetak Generasi Islami, Mandiri, Berprestasi</p>
   </header>
 
-  <!-- Navigation -->
   <nav>
     <a href="index.html">🏠 PROFIL</a>
-    <a href="visi-misi.html">VISI DAN MISI</a>
+    <a href="#">VISI & MISI</a>
     <a href="#">KATEGORI</a>
     <a href="#">DIREKTORI</a>
     <a href="#">E-RAPORT</a>
@@ -228,7 +221,6 @@
     <a href="#">KONTAK</a>
   </nav>
 
-  <!-- Main Content -->
   <main>
     <h2>Selamat Datang di Website SMK Muhammadiyah 1 Kalasan</h2>
 
@@ -248,21 +240,20 @@
       <div class="card-container">
         <div class="card">
           <h3>⚙️ Teknika Kapal Niaga</h3>
-          <p>Fokus pada teknik mesin kapal niaga, siswa belajar pengoperasian dan perawatan mesin utama serta sistem kelistrikan kapal.</p>
+          <p>Belajar mesin utama & bantu kapal, sistem perpipaan, elektro kapal, serta regulasi seperti SOLAS dan STCW.</p>
         </div>
         <div class="card">
           <h3>🧭 Nautika Kapal Niaga</h3>
-          <p>Belajar navigasi, keselamatan pelayaran, dan hukum laut. Lulusan siap menjadi perwira deck di kapal nasional maupun internasional.</p>
+          <p>Fokus navigasi, hukum laut, keselamatan pelayaran, dan manuver kapal. Lulusan siap jadi perwira deck.</p>
         </div>
         <div class="card">
           <h3>🎵 Seni Musik Populer</h3>
-          <p>Mengembangkan bakat musik modern, vokal, produksi audio dan manajemen pertunjukan dengan bimbingan musisi profesional.</p>
+          <p>Teknik vokal, audio digital, manajemen konser. Didampingi musisi profesional dan fasilitas rekaman lengkap.</p>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     &copy; 2025 SMK Muhammadiyah 1 Kalasan
   </footer>
